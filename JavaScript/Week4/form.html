@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form first attempt</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+		<!--fieldset makes a box while legend is the title of the fieldset -->
+			<!-- 
+				TAGS:
+				label tag is for accessibility. clicking on label tag will directly take us to the input field. Good for checkboxes where clicking on checkboxes could be hard. 
+				input tag is to give information to the form be it checkboxes, radio button, text
+				Attributes:
+				for should match id so that label can directly point to the input
+				Only form elements with a name attribute will have their values passed when submitting a form. 
+				value is the VALUE shown when we open the form. This is the default value passed if nothing is written. 
+				type represent various type of inputs
+
+				Default value of type is text : in case there is wrong spelling, still it is text
+				 
+			-->
+			<legend>Input Types</legend>
+			<label for="fname"> First Name</label>
+			<input type="text" id="fname" name="fname" value="Enter Your first name"><br>
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lname" value="Enter Your last name"><br>
+
+			<!-- In the example below, we don't need for and id as it is linked directly; kind of shorthand-->
+			<label>Email: <input type="text" name="email" value=abc@example.com></label><br>
+			Radio Buttons<br>
+			<label><input type="radio" name="sex" value="male" checked>Male</label>
+			<label><input type="radio" name="sex" value="female" >Female</label>
+
+			<br>Checkboxes Buttons<br>
+			<label><input type="checkbox" name="contact1" value="hi" checked="">Contact me via Email</label><br>
+			<label><input type="checkbox" name="contact2" value="hi">Contact me via phone</label>
+
+			<br>
+			<label>Number<input type="Number" name="numberInput" min="1" max="2"></label><br>
+			<label>Range<input type="range" name="rangeInput" min="1" max="10" value="2"></label><br>
+			<label>Date:<input type="date" name="dateInput" min="1" max="10" value="2"></label><br>
+			<label>URL:<input type="url" name="urlInput" value="2"></label><br>
+			<input type="submit" value="Click to submit">
+
+
+		</fieldset>
+	</form>
+</body>
+</html>
